@@ -408,6 +408,7 @@ ServerEvents.recipes(event => {
    * 
    * Notice: Smoking recipes are automatically added by Create!
    */
+  event.recipes.minecraft.smoking('minecraft:leather', 'minecraft:rotten_flesh').id('finality:smoking/rotten_flesh')
   /**
    * COMPACTING
    */
