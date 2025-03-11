@@ -26,16 +26,6 @@
 	
 #Coin Mint Settings
 [coin_mint]
-	#Whether or not Coin Mint recipes of mintType "MINT" will function.
-	#Defaults to the built-in recipes that turn resources into coins.
-	#Default: true
-	canMint=true
-	
-	#Whether or not Coin Mint recipes of mintType "MELT" will function.
-	#Defaults to the built-in recipes that turn coins back into resources.
-	#Default: false
-	canMelt=false
-	
 	#Default number of ticks it takes to process a Coin Mint recipe.
 	#Does not apply to Coin Mint recipes with a defined "duration" input.
 	#Range: 1 -> 72000
@@ -47,60 +37,6 @@
 	#Default: 0.5
 	soundVolume=0.5
 	
-	#Default Recipes
-	[coin_mint.recipes]
-		#Minting
-		[coin_mint.recipes.mint]
-			#Whether recipes of mintType "MINT" with an output of copper coins will function.
-			#Default: true
-			copper=false
-			
-			#Whether recipes of mintType "MINT" with an output of iron coins will function.
-			#Default: true
-			iron=false
-			
-			#Whether recipes of mintType "MINT" with an output of gold coins will function.
-			#Default: true
-			gold=false
-			
-			#Whether recipes of mintType "MINT" with an output of emerald coins will function.
-			#Default: true
-			emerald=false
-			
-			#Whether recipes of mintType "MINT" with an output of diamond coins will function.
-			#Default: true
-			diamond=false
-			
-			#Whether recipes of mintType "MINT" with an output of netherite coins will function.
-			#Default: true
-			netherite=false
-			
-		#Melting
-		[coin_mint.recipes.melt]
-			#Whether recipes of mintType "MELT" with an output of copper ingots will function.
-			#Default: true
-			copper=false
-			
-			#Whether recipes of mintType "MELT" with an output of iron ingots will function.
-			#Default: true
-			iron=false
-			
-			#Whether recipes of mintType "MELT" with an output of gold ingots will function.
-			#Default: true
-			gold=false
-			
-			#Whether recipes of mintType "MELT" with an output of emeralds will function.
-			#Default: true
-			emerald=false
-			
-			#Whether recipes of mintType "MELT" with an output of diamonds will function.
-			#Default: true
-			diamond=false
-			
-			#Whether recipes of mintType "MELT" with an output of netherite ingots will function.
-			#Default: true
-			netherite=false
-			
 #Wallet Settings
 [wallet]
 	#The lowest level wallet capable of exchanging coins.
@@ -208,10 +144,19 @@
 	#Default: "coin;1-kubejs:copper_coin"
 	moneyMendingRepairCost="coin;1-kubejs:copper_coin"
 	
-	#The additional cost to repair an item with Infinity applied to it.
+	#A list of base cost overrides to be applied to specific items!
+	#Each entry should be formatted as "baseCost|namespace:some_item,namespace:some_item_2,#namespace:some_tag..."
+	#where 'baseCost' is a Money Value input
 	#See the wiki for Money Value format: https://github.com/Lightman314/LightmansCurrency/wiki/Money-Value-Arguments
-	#Default: "coin;4-kubejs:copper_coin"
-	moneyMendingInfinityCost="coin;4-kubejs:copper_coin"
+	moneyMendingItemOverrides=[]
+	
+	#A list of bonus costs to be applied to items with the given enchantments
+	#Each entry should be formatted as either of the following:
+	#"bonusCost|namespace:some_enchantment|maxLevelCalculation" OR
+	#"bonusCost|namespace:some_enchantment"
+	#where 'bonusCost' is a Money Value input
+	#See the wiki for Money Value format: https://github.com/Lightman314/LightmansCurrency/wiki/Money-Value-Arguments
+	moneyMendingBonusForEnchantments=["coin;4-kubejs:copper_coin|minecraft:infinity|1"]
 	
 	#The coin collection radius of the Coin Magnet I enchantment.
 	#Range: 1 -> 50
@@ -310,6 +255,13 @@
 	#Range: 0 -> 2147483647
 	#Default: 1200
 	maxRedstoneDuration=1200
+	
+#Command Trader Settings
+[command_trader]
+	#The maximum permission level that can be set and used by a command trader
+	#Range: 0 -> 4
+	#Default: 4
+	maxPermissionLevel=4
 	
 #Player <-> Player Trading Options
 [player_trading]

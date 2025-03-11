@@ -273,7 +273,8 @@
 					"lightmanscurrency:coin_mint",
 					"lightmanscurrency:ticket_station",
 					"summoningrituals:altar",
-					"celestisynth:starlit_factory"
+					"celestisynth:starlit_factory",
+					"fruitfulfun:dragon_ritual/minecraft/default"
 				],
 				"hiddenCategories": []
 			}
