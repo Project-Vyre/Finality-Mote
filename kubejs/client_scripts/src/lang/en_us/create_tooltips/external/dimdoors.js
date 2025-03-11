@@ -29,7 +29,7 @@ ClientEvents.lang('en_us', event => {
       .build()
   )
   event.addAll('dimdoors',
-    createTooltip('dimdoors:amalgam_clump')
+    createTooltip('dimdoors:amalgam_lump')
       .addSummary('Used in making Amalgam related items and blocks. Mod author will most likely have other uses for it in a future mod update.')
       .addBehaviour([
         'Acquisition',
