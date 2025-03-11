@@ -1,5 +1,6 @@
 // requires: exposure
 // requires: create
+// ignored: true
 
 ItemEvents.tooltip(event => {
   event.addAdvanced('exposure:black_and_white_film', (item, advanced, text) => {
