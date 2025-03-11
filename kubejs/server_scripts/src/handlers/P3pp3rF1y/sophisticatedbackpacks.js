@@ -99,6 +99,7 @@ ServerEvents.recipes(event => {
     { output: 'sophisticatedbackpacks:stack_upgrade_tier_2' },
     { output: 'sophisticatedbackpacks:stack_upgrade_tier_3' },
     { output: 'sophisticatedbackpacks:stack_upgrade_tier_4' },
+    { output: 'sophisticatedbackpacks:stack_upgrade_omega_tier' },
     { id: 'sophisticatedbackpacks:xp_pump_upgrade' }
   ])
   event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:upgrade_base', [
@@ -431,6 +432,16 @@ ServerEvents.recipes(event => {
     N: 'kubejs:netherite_singularity',
     U: 'sophisticatedbackpacks:stack_upgrade_tier_3'
   }).id('kubejs:sophisticatedbackpacks/stack_upgrade_tier_4')
+  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:stack_upgrade_omega_tier', [
+    ' FFF ',
+    'FNNNF',
+    'FNNNF',
+    'FNNNF',
+    ' FFF '
+  ], {
+    N: 'sophisticatedbackpacks:stack_upgrade_tier_4',
+    F: 'kubejs:final_singularity'
+  }).id('kubejs:sophisticatedbackpacks/stack_upgrade_omega_tier')
   // jukebox
   event.recipes.minecraft.crafting_shapeless('sophisticatedbackpacks:jukebox_upgrade', [
     'sophisticatedbackpacks:upgrade_base',

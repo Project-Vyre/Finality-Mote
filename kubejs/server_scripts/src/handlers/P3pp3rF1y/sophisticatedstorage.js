@@ -69,6 +69,7 @@ ServerEvents.recipes(event => {
     { output: 'sophisticatedstorage:stack_upgrade_tier_3' },
     { output: 'sophisticatedstorage:stack_upgrade_tier_4' },
     { output: 'sophisticatedstorage:stack_upgrade_tier_5' },
+    { output: 'sophisticatedstorage:stack_upgrade_omega_tier' },
     { output: 'sophisticatedstorage:basic_tier_upgrade' },
     { output: 'sophisticatedstorage:basic_to_copper_tier_upgrade' },
     { output: 'sophisticatedstorage:basic_to_iron_tier_upgrade' },
@@ -422,6 +423,16 @@ ServerEvents.recipes(event => {
     N: 'kubejs:netherite_singularity',
     U: 'sophisticatedstorage:stack_upgrade_tier_4'
   }).id('kubejs:sophisticatedstorage/stack_upgrade_tier_5')
+  event.recipes.create.mechanical_crafting('sophisticatedstorage:stack_upgrade_omega_tier', [
+    ' FFF ',
+    'FNNNF',
+    'FNNNF',
+    'FNNNF',
+    ' FFF '
+  ], {
+    N: 'sophisticatedstorage:stack_upgrade_tier_5',
+    F: 'kubejs:final_singularity'
+  }).id('kubejs:sophisticatedstorage/stack_upgrade_omega_tier')
   // jukebox
   event.recipes.minecraft.crafting_shapeless('sophisticatedstorage:jukebox_upgrade', [
     'sophisticatedstorage:upgrade_base',
