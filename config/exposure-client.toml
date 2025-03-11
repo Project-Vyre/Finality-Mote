@@ -4,7 +4,7 @@
 	#Only when JEI is not installed. (Only JEI shows these recipes, not REI or EMI)
 	RecipeTooltipsWithoutJei = true
 	#Details about Camera configuring will be shown in Camera item tooltip.
-	CameraDetailsInTooltip = false
+	CameraDetailsInTooltip = true
 	#Film Roll Frames will be shown in the camera tooltip.
 	#Default: true
 	CameraFilmFramesTooltip = true
