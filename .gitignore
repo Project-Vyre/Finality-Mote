@@ -24,6 +24,7 @@ config/spark/activity.json
 usercache.json
 usernamecache.json
 bookmark.ini
+bookmarks.ini
 config/roughlyenoughitems/hints.json
 config/jei/world/server/*
 enigmatic_persistence.dat
