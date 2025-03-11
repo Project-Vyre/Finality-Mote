@@ -71,6 +71,18 @@ debug/
 exposures/*
 .mixin.out/*
 
+# Ignore ProbeJS generated files in .vscode
+fluid-attributes.json
+item-attributes.json
+item-tag-attributes.json
+lang-keys.json
+probe.class-definitions.json
+probe.lang_key-definitions.json
+probe.lang-schema.json
+probe.registry-definitions.json
+probe.doc-schema.json
+probe.code-snippets
+
 # Don't ignore certain local files
 local/*
 local/ftbchunks/data
